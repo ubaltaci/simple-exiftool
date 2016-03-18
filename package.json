@@ -1,0 +1,45 @@
+{
+  "name": "simple-exiftool",
+  "version": "1.0.0",
+  "description": "Extracting metadata from media files with exiftool, including but not limited to mp4, mov, 3gp, jpg, png, gif, pdf.",
+  "main": "./lib/exif",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha ./test"
+  },
+  "author": {
+    "name": "Uğur Baltacı",
+    "email": "me@ugurbaltaci.com"
+  },
+  "engines": {
+    "node": ">= 4.x.x"
+  },
+  "dependencies": {
+    "lodash": "^4.6.1"
+  },
+  "devDependencies": {
+    "mocha": "2.4.5",
+    "chai": "3.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ubaltaci/simple-exiftool.git"
+  },
+  "keywords": [
+    "exif",
+    "metadata",
+    "image",
+    "video duration",
+    "image type",
+    "exiftool",
+    "mp4",
+    "avi",
+    "jpg",
+    "png",
+    "mov",
+    "3gp",
+    "pdf",
+    "ffprobe",
+    "mediainfo"
+  ],
+  "license": "MIT"
+}

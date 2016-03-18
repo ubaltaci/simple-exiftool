@@ -1,0 +1,39 @@
+.idea
+
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+pids
+heapdump-*.heapsnapshot
+heapdump-*.log
+results
+node_modules
+logs/*
+toberemoved
+
+npm-debug.log
+test/credentials.json
+utils/cpp/ns
+tmpfiles/
+kns.txt
+Downloads
+kns.sqlite*
+setup.json
+
+# node-webkit files
+*.exe
+*.dll
+*.pak
+
+# Mac OS X file system
+.DS_Store
+# temporary files
+*~
+
+public

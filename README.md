@@ -1,4 +1,5 @@
-https://travis-ci.org/ubaltaci/simple-exiftool.svg?branch=master
+![Build Status](https://travis-ci.org/ubaltaci/simple-exiftool.svg?branch=master)
+
 
 [exiftool](http://owl.phy.queensu.ca/~phil/exiftool/) is a platform-independent Perl library plus a command-line application for reading, writing and editing meta information in a wide variety of files.
 

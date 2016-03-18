@@ -54,7 +54,6 @@ describe("giving valid paths to exiftool", () => {
 
                 Expect(error).to.not.exist;
                 Expect(metadata).to.have.property("FileType");
-                Expect(metadata).to.have.property("FileTypeExtension");
                 Expect(metadata).to.have.property("MIMEType");
                 Expect(metadata["MIMEType"]).to.equal("image/jpeg");
                 done();
@@ -71,11 +70,9 @@ describe("giving valid paths to exiftool", () => {
                 Expect(error).to.not.exist;
                 Expect(metadata).to.have.lengthOf(2);
                 Expect(metadata[0]).to.have.property("FileType");
-                Expect(metadata[0]).to.have.property("FileTypeExtension");
                 Expect(metadata[0]).to.have.property("MIMEType");
                 Expect(metadata[0]["MIMEType"]).to.equal("image/jpeg");
                 Expect(metadata[1]).to.have.property("FileType");
-                Expect(metadata[1]).to.have.property("FileTypeExtension");
                 Expect(metadata[1]).to.have.property("MIMEType");
                 Expect(metadata[1]["MIMEType"]).to.equal("image/jpeg");
                 done();
@@ -92,11 +89,9 @@ describe("giving valid paths to exiftool", () => {
                 Expect(error).to.not.exist;
                 Expect(metadata).to.have.lengthOf(2);
                 Expect(metadata[0]).to.have.property("FileType");
-                Expect(metadata[0]).to.have.property("FileTypeExtension");
                 Expect(metadata[0]).to.have.property("MIMEType");
                 Expect(metadata[0]["MIMEType"]).to.equal("image/jpeg");
                 Expect(metadata[1]).to.have.property("FileType");
-                Expect(metadata[1]).to.have.property("FileTypeExtension");
                 Expect(metadata[1]).to.have.property("MIMEType");
                 Expect(metadata[1]["MIMEType"]).to.equal("video/mp4");
                 done();
@@ -128,7 +123,6 @@ describe("giving binary data to exiftool", () => {
 
             Expect(error).to.not.exist;
             Expect(metadata).to.have.property("FileType");
-            Expect(metadata).to.have.property("FileTypeExtension");
             Expect(metadata).to.have.property("MIMEType");
             Expect(metadata["MIMEType"]).to.equal("image/jpeg");
             done();

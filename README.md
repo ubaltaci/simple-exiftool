@@ -1,3 +1,5 @@
+https://travis-ci.org/ubaltaci/simple-exiftool.svg?branch=master
+
 [exiftool](http://owl.phy.queensu.ca/~phil/exiftool/) is a platform-independent Perl library plus a command-line application for reading, writing and editing meta information in a wide variety of files.
 
 This npm package is a simple wrapper for exiftool, you can extract metadata / meta information from media files easily. Like; video duration, image resolution etc.

@@ -2,6 +2,7 @@
 
 const Fs = require("fs");
 const Path = require("path");
+const Exec = require("child_process").exec;
 const Expect = require("chai").expect;
 const Exif = require("..");
 
@@ -127,5 +128,49 @@ describe("giving binary data to exiftool", () => {
             Expect(metadata["MIMEType"]).to.equal("image/jpeg");
             done();
         });
+    });
+});
+
+describe("giving settings to simple-exiftool", () => {
+
+
+    let exiftoolPath;
+
+    before((done) => {
+
+        Exec("which exiftool", (error, stdout, stderr) => {
+
+            if (error || stderr) {
+                throw error || stderr;
+            }
+            exiftoolPath = stdout.trim();
+            done();
+        });
+    });
+
+    it("should run with the full path of exiftool", (done) => {
+
+        Exif(Path.join(__dirname, "files/lion.jpg"), {binary: exiftoolPath}, (error, metadata) => {
+
+            Expect(error).to.not.exist;
+            Expect(metadata).to.have.property("FileType");
+            Expect(metadata).to.have.property("MIMEType");
+            Expect(metadata["MIMEType"]).to.equal("image/jpeg");
+            done();
+        });
+
+    });
+
+    it("should run with the full path of exiftool and some args", (done) => {
+
+        Exif(Path.join(__dirname, "files/lion.jpg"), {binary: exiftoolPath, args: ["-S"]}, (error, metadata) => {
+            
+            Expect(error).to.not.exist;
+            Expect(metadata).to.have.property("FileType");
+            Expect(metadata).to.have.property("MIMEType");
+            Expect(metadata["MIMEType"]).to.equal("image/jpeg");
+            done();
+        });
+
     });
 });

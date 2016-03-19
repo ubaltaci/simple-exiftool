@@ -32,12 +32,24 @@ npm install simple-exiftool --save
 ## Usage
 
 
+```js
+const Exif = require("simple-exiftool");
+Exif(source, [settings], callback);
+
+// Default settings are
+// {
+// 		binary: "exiftool",
+//		args: ["-json", "-n"]
+// }
+// 
+// -json argument can not be overriden, since this module parse outputs of exiftool with JSON.parse
+
+```
 ###1. Passing single media file path
- 
 ```js
 const Exif = require("simple-exiftool");
 
-Exif("image.jpg", (error, metadata) => {
+Exif("/x/y/image.jpg", (error, metadata) => {
 	
 	if (error) {
         // handle error
@@ -51,7 +63,7 @@ Exif("image.jpg", (error, metadata) => {
 ```js
 const Exif = require("simple-exiftool");
 
-Exif(["image.jpg", "movie.mp4"], (error, metadataArray) => {
+Exif(["/x/yimage.jpg", "/a/bmovie.mp4"], (error, metadataArray) => {
 
 	if (error) {
         // handle error
@@ -67,7 +79,7 @@ Exif(["image.jpg", "movie.mp4"], (error, metadataArray) => {
 const Exif = require("simple-exiftool");
 const Fs = require("fs");
 
-Fs.readFile("image.jpg", (error, binaryData) => {
+Fs.readFile("/x/y/image.jpg", (error, binaryData) => {
 
 	if (error) {
         // handle error
@@ -83,3 +95,20 @@ Fs.readFile("image.jpg", (error, binaryData) => {
 });
 
 ```
+###4. Exiftool binary path and extra arguments
+
+
+```js
+const Exif = require("simple-exiftool");
+
+Exif("/x/y/image.jpg", {binary: "exiftool2", args:["-json", "-s"]}, (error, metadataArray) => {
+
+	if (error) {
+        // handle error
+	}
+	console.log(metadataArray[0], metadataArray[1]);
+});
+
+```
+
+

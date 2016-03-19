@@ -1,6 +1,6 @@
 {
   "name": "simple-exiftool",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Extracting metadata from media files with exiftool, including but not limited to mp4, mov, 3gp, jpg, png, gif, pdf.",
   "main": "./lib/exif",
   "scripts": {

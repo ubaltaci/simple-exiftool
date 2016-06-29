@@ -14,8 +14,8 @@ You can see complete list of supported media files from [here](http://www.sno.ph
 * __OS X:__
 
 ```
-sudo brew update
-sudo brew install exiftool
+brew update
+brew install exiftool
 npm install simple-exiftool --save
 ```
 

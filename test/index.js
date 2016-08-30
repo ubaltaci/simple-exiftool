@@ -173,4 +173,17 @@ describe("giving settings to simple-exiftool", () => {
         });
 
     });
+
+     it("should not modifiy given settings.args", (done) => {
+        var givenArgs=['-FileName'];
+        Exif(Path.join(__dirname, "files/lion.jpg"), {binary: exiftoolPath, args: givenArgs}, (error, metadata) => {
+
+            Expect(error).to.not.exist;
+            // giveArgs should not be modified
+            Expect(givenArgs).to.have.length(1);
+
+            done();
+        });
+
+    });
 });

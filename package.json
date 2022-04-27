@@ -2,7 +2,7 @@
   "name": "simple-exiftool",
   "version": "1.1.0",
   "description": "Extracting metadata from media files with exiftool, including but not limited to mp4, mov, 3gp, jpg, png, gif, pdf.",
-  "main": "./lib/exif",
+  "main": "./lib/index",
   "scripts": {
     "test": "./node_modules/.bin/mocha ./test"
   },
